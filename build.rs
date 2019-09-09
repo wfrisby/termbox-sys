@@ -13,6 +13,7 @@ fn main() {
     install(&dst);
     clean();
     println!("cargo:rustc-link-search={}", dst.join("lib").display());
+    println!("cargo:rustc-link-search={}", dst.join("lib64").display());
     println!("cargo:rustc-link-lib=static=termbox");
 }
 
